@@ -18,12 +18,12 @@ int main()
         }
         else
         {
-            printf("\nHello! I am in CHILD");
+            printf("\nHello! I am in CHILD\n");
         }
     }
     else
     {
-        printf("\nHello I am in PARENT");
+        printf("\nHello I am in PARENT\n");
     }
 
     return 0;
