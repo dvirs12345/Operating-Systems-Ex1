@@ -25,7 +25,8 @@ int main()
     {
         printf("\nHello I am in PARENT\n");
     }
-
+    
+    sleep(10); 
     return 0;
 } 
 

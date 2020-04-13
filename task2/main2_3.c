@@ -4,6 +4,8 @@
 #include <unistd.h>
 #include <syslog.h>
 
+#define SLEEP_TIME 4000000
+
 int main()
 {
     pid_t pid = fork();
@@ -17,9 +19,9 @@ int main()
         close(stderr);
 
         openlog("Daemon1", LOG_PID, LOG_DAEMON);
-        usleep(3000000);
+        usleep(SLEEP_TIME);
         syslog(LOG_NOTICE, "Working on it...");
-        usleep(3000000);
+        usleep(SLEEP_TIME);
         syslog(LOG_NOTICE, "DONE!");
     }
     else

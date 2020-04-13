@@ -38,4 +38,5 @@ int main()
     printf("ID 2 = %d\n", r2);
     printf("ID 3 = %d\n", r3);
     printf("Parent id %d\n", getpid());
+    sleep(10);
 }
