@@ -4,7 +4,6 @@
 
 int main()
 {
-	hello_message();
-	
+	hello_message(); // Rin the func from .so
 	return 0;
 }

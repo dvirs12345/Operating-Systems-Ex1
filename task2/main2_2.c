@@ -8,6 +8,7 @@
 #define STACK_SIZE 10000
 char child_stack[STACK_SIZE+1];
 
+// Just a func for testing
 void print(const char *text)
 {
     for(int i=0;i<30;i++)
@@ -18,11 +19,13 @@ void print(const char *text)
         
 }
 
+// Func for child
 int func(void *params)
 {
     print("Child\n");
 }
 
+// Func for grand-child 
 int func2(void *params)
 {
     print("Grand-Child\n");
@@ -30,11 +33,11 @@ int func2(void *params)
 
 int main()
 {
-    int r1 = clone(func, child_stack+STACK_SIZE, CLONE_PARENT, 0);
+    int r1 = clone(func, child_stack+STACK_SIZE, CLONE_PARENT, 0); // makes a new thread like 
     int r2 = clone(func2, child_stack+STACK_SIZE, CLONE_PARENT, 0);
-    printf("clone id = %d\n", r1);
-    printf("clone id = %d\n", r2);
-    printf("parent id %d\n", getpid());
+    printf("Clone ID = %d\n", r1);
+    printf("Clone ID = %d\n", r2);
+    printf("Parent ID %d\n", getpid());
 
     return 0;
 }

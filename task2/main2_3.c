@@ -8,16 +8,21 @@
 
 int main()
 {
-    pid_t pid = fork();
+    pid_t pid = fork(); // Duplicate
     if(pid == 0) // If In Child
     {
+        // Working on the current directory
         chdir("/");
+
+        // move to a new session
         setsid();
 
+        // Close open channels for input or output
         close(stdout);
         close(stdin);
         close(stderr);
 
+        // Log updates
         openlog("Daemon1", LOG_PID, LOG_DAEMON);
         usleep(SLEEP_TIME);
         syslog(LOG_NOTICE, "Working on it...");

@@ -8,6 +8,7 @@
 #define STACK_SIZE 10000
 char child_stack[STACK_SIZE+1];
 
+// Run main2_1
 int main2_1()
 {
     char * args[2] = {"./main2_1",NULL};
@@ -15,6 +16,7 @@ int main2_1()
     return 0;
 }
 
+// Run main2_2
 int main2_2()
 {
     char * args[2] = {"./main2_2",NULL};
@@ -22,6 +24,7 @@ int main2_2()
     return 0;
 }
 
+// Run main2_3
 int main2_3()
 {
     char * args[2] = {"./main2_3",NULL};

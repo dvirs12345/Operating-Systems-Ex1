@@ -4,6 +4,6 @@
 
 int main()
 {
-	hello_message();
+	hello_message(); // Running the func
 	return 0;
 }
